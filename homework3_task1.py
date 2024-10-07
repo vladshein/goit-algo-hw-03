@@ -37,14 +37,11 @@ def parse_folder(input_folder, output_folder):
             
             create_folder_by_extention(output_folder, extention)
             source = Path(element)
-            print(f"Source is {source}")
             target = create_folder_by_extention(output_folder, extention)
-            print(f"Target is {target}")
             try:
                 copy(source, target)
             except Exception as e:
                 print(e)
-            
 
 
 def parse_folder_recursion(path):
